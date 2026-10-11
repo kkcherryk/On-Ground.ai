@@ -1,62 +1,94 @@
-# On-Ground.ai · Xeloro Call Centre Frontend
+# Xeloro · Call Centre Workspace
 
-A React and TypeScript frontend prototype based on the supplied Xeloro Figma design. This repository is being implemented in six stages. Stage 1 is complete: application foundation and navigation.
+### One workspace for customer support, from first contact to follow-up.
 
-## Run locally
+A working **frontend prototype** for On-Ground.ai, built from the supplied brief and Xeloro Figma reference. Agents can manage voice, chat, and email interactions, review customer history, handle tickets, and coordinate with supervisors.
 
-Requires Node.js 22.12+ and npm.
+**React 19 · TypeScript · Vite · Responsive UI · Local persistence**
+
+
+All six implementation stages are complete. The app uses fictional records and simulated operations; no backend is required.
+
+## Features at a glance
+
+| Workspace           | What you can do                                                                                                                                             |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Work Queue**      | Search customers and cases; filter by channel, priority, status, and assignment; sort by wait time; preview customer context; bulk reassign waiting work.   |
+| **Live Workspace**  | Accept an interaction, use simulated call controls, draft chat/email replies, consult guidance, and record a wrap-up outcome.                               |
+| **Customer CRM**    | View contact and account details, verification status, related cases, previous calls/emails/chats, customer questions, agent answers, and staff-only notes. |
+| **Cases & Tickets** | Create and edit tickets, review conversations and audit trails, transfer or escalate cases, filter records, paginate results, and export CSV.               |
+| **Follow-ups**      | Schedule and assign reminders, reschedule or postpone, mark complete, cancel/restore, and open a linked interaction.                                        |
+| **Supervisor View** | Review agent availability and workload, approve or decline requests, reassign cases, and move pending follow-ups with their cases.                          |
+| **Knowledge Base**  | Search articles and saved replies, filter by category, expand guidance, and insert replies from the live workspace.                                         |
+
+### Built around the customer conversation
+
+- **Context stays connected.** Customers, cases, interactions, history, and reminders share linked records.
+- **Three wrap-up outcomes.** Resolve the issue, schedule a follow-up, or escalate for review. Required summaries keep the next step clear.
+- **Safe handoffs.** Transfers require a reason and preserve conversation context. Bulk reassignment excludes active, held, wrap-up, and resolved cases.
+- **Refresh without losing work.** Replies, drafts, call state, outcomes, assignments, approvals, and preferences persist in browser storage. Queue filters stay in the URL.
+- **Clear customer/staff boundaries.** Internal notes are labelled staff only; approval decisions are recorded separately from case resolution.
+- **Desktop to mobile.** Responsive layouts, keyboard navigation, labelled controls, focus restoration, bounded dialogs, and a scrollable queue table.
+
+## Quick start
+
+**Requirements:** Node.js 22.12+ and npm.
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
-Open the local URL printed by Vite. Production compilation: `npm run build`. Preview the production build: `npm run preview`.
+Open the local URL printed by Vite.
 
-## Stage 1 functionality
+| Command                | Purpose                                                         |
+| ---------------------- | --------------------------------------------------------------- |
+| `npm run dev`          | Start the local development server                              |
+| `npm run build`        | Compile TypeScript and generate the production build in `dist/` |
+| `npm run preview`      | Preview the production build locally                            |
+| `npm run format:check` | Check code formatting                                           |
 
-- Shared Figma header and sidebar, locally bundled Inter and Plus Jakarta Sans fonts, design variables, and reusable UI components.
-- Navigation to the queue, selected interaction, customers, cases, follow-ups, knowledge, and supervisor overview.
-- Five linked fictional customer records with matching cases and interactions; three follow-ups and four agents.
-- Queue summary counts calculated from the sample data, search, priority/status/channel filters, sorting, and customer preview selection.
-- Working availability selector, assist toggle, notifications, fullscreen toggle, and demo reset confirmation.
-- Availability, assist mode, and selected interaction persist in local storage. Search is kept in the queue URL. Filters are temporary view state.
-- Accessible labels, focus styles, skip navigation, native modal focus handling, and initial responsive layouts.
+## Try the complete workflow
 
-## Stage review
+1. **Find work:** Open the queue, filter by channel or assignment, and select a customer preview.
+2. **Understand the issue:** Open the interaction and review the customer’s profile, previous questions, answers, and notes.
+3. **Respond:** Accept the work, try the simulated controls, or insert a saved reply into a chat/email draft.
+4. **Choose the next step:** End the interaction and save a resolution, follow-up, or escalation with a summary.
+5. **Coordinate:** Review the case audit trail, manage its reminder, or use Supervisor View for approval and reassignment.
 
-1. Open the queue and select different customer previews.
-2. Search for `CAS-8930`, open the interaction, and confirm Amina's customer and case are shown.
-3. Change agent availability and check the supervisor overview; refresh and confirm it persists.
-4. Toggle assist mode, navigate to a workspace, and confirm sample guidance follows the preference.
-5. Open notifications and follow the linked record.
-6. Open Reset Demo, cancel it, then confirm it to return to the initial sample state.
+Use **Reset demo data** in the sidebar to restore the original records. The starting dataset contains five customers with linked cases/interactions, four agents, three reminders, and one pending approval. Times are displayed in **Asia/Kolkata**.
 
-## Remaining stages
+## Project structure
 
-2. Customer history, verification, expanded queue management and record context.
-3. Simulated call controls, chat/email replies, knowledge search, and basic wrap-up.
-4. Case editing, ticket creation, transfers, escalation, and follow-up management.
-5. Supervisor approvals and reassignment.
-6. Full visual alignment, responsive refinement, accessibility review, and submission documentation.
+```text
+src/
+├── components/   Shared UI, navigation, dialogs, history, and handoff forms
+├── pages/        Queue, workspace, CRM, cases, follow-ups, and supervisor screens
+├── data/         Record types, fictional seed data, and CSV export
+├── state/        React Context, reducer actions, and local storage persistence
+└── styles/       Global styles and design foundations
+public/assets/    Locally bundled design assets
+docs/             Review record, asset manifest, and submission guide
+```
 
-The current interaction, case, follow-up, and supervisor pages are read-only foundation views. Ticket creation, bulk reassignment, and transfer controls are disabled. Stage 1 does not provide telephony, message delivery, authentication, a backend, or real AI services. Sample operational data is labelled in the interface. Each later stage adds the corresponding working workflows.
+**Implementation:** React Router handles navigation; CSS Modules style the screens; React Context with a reducer manages shared state. Fonts and design assets are bundled locally.
 
-## Design reference and assets
+## Design & review
 
-- [Figma connected screens](https://www.figma.com/design/Ccn1UyiRSCOBpZaRBR1u10/Untitled?node-id=12-23)
-- Queue: `8:2`; header: `8:578`; sidebar: `8:532`; metrics: `8:58`; filter toolbar: `8:117`; queue table: `8:206`; customer preview: `8:441`.
-- Figma-exported assets live in `public/assets`. `docs/design-assets.json` records their source nodes and intended slots. Temporary Figma URLs are not used by the application.
-- Sample counts and record content are kept consistent even where the original static design has differing numbers or customer details.
+- **Design reference:** [Supplied Xeloro Figma screens](https://www.figma.com/design/Ccn1UyiRSCOBpZaRBR1u10/Untitled?node-id=12-23).
+- **Assets:** [Design asset manifest](docs/design-assets.json) records source nodes and intended UI slots. The application does not rely on temporary Figma asset URLs.
+- **Verification:** Main workflows, refresh persistence, responsive layouts, and CSV export received a manual browser regression. A queue filter race was fixed and retested. Production compilation and formatting checks passed.
+- **Detailed coverage:** [Review record](docs/REVIEW.md).
+- **Demo & hosting:** [Submission guide](docs/SUBMISSION.md) includes a short demo script, static hosting notes, and the submission checklist.
 
-## Implementation choices
+## Prototype scope
 
-Vite, React, TypeScript, React Router, CSS Modules, React Context with a reducer, and browser local storage. All data is fictional. Shared record types are defined in `src/data/types.ts`; sample records in `src/data/seed.ts`; state actions in `src/state/AppProvider.tsx`.
+Calls, recording controls, messages, verification, copilot guidance, credits, and supervisor roles are simulations. No audio is captured, no real messages or credits are sent, and there is no authentication, backend, or live AI integration. Data is stored locally in the browser and is not shared between users.
 
-## AI tools used
+Testing covered the local frontend. No automated test suite, cross-browser matrix, formal accessibility certification, or deployed-host verification is claimed.
 
-OpenAI Codex and the Figma connector were used to inspect the supplied design, generate original application code, and review implementation. Figma-generated design context was adapted to reusable React components and CSS Modules. No live mock website source was copied.
+## AI tools & authorship
 
-## Git handoff
+**OpenAI Codex** and the **Figma connector** were used to inspect the supplied design, generate original application code, and review the implementation. Design context was adapted into reusable React components and CSS Modules. No live mock website source was copied.
 
-No commits or pushes are made by the implementation agent. After each stage, the user reviews, commits, and pushes before requesting the next stage.
+Repository commits and pushes are handled by the user.
