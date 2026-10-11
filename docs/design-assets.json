@@ -1,0 +1,193 @@
+{
+  "fileKey": "Ccn1UyiRSCOBpZaRBR1u10",
+  "assets": [
+    {
+      "file": "public/assets/header-0.svg",
+      "figmaNode": "8:578",
+      "figmaVariable": "imgSvg"
+    },
+    {
+      "file": "public/assets/header-1.svg",
+      "figmaNode": "8:578",
+      "figmaVariable": "imgVector"
+    },
+    {
+      "file": "public/assets/header-2.svg",
+      "figmaNode": "8:578",
+      "figmaVariable": "imgSvg1"
+    },
+    {
+      "file": "public/assets/header-3.svg",
+      "figmaNode": "8:578",
+      "figmaVariable": "imgSvg2"
+    },
+    {
+      "file": "public/assets/header-4.svg",
+      "figmaNode": "8:578",
+      "figmaVariable": "imgButtonFullscreenToggleIconSvg"
+    },
+    {
+      "file": "public/assets/header-5.svg",
+      "figmaNode": "8:578",
+      "figmaVariable": "imgSvg3"
+    },
+    {
+      "file": "public/assets/header-6.svg",
+      "figmaNode": "8:578",
+      "figmaVariable": "imgImage"
+    },
+    {
+      "file": "public/assets/heading-0.svg",
+      "figmaNode": "8:18",
+      "figmaVariable": "imgContainer"
+    },
+    {
+      "file": "public/assets/heading-1.svg",
+      "figmaNode": "8:18",
+      "figmaVariable": "imgContainer1"
+    },
+    {
+      "file": "public/assets/metric-0.svg",
+      "figmaNode": "8:58",
+      "figmaVariable": "imgContainer"
+    },
+    {
+      "file": "public/assets/queue-0.png",
+      "figmaNode": "8:206",
+      "figmaVariable": "imgAb6AXuDMuihKKcZzdm0IstLplWLqPfLorfVgQoHiqBs4Kz5Wx684HioNaf8MO1I1ZLzEmFgh4L9TAbpPb4Ac861A0Bt9L8Vl9On8Ariiwm8RzzRsPxxtdGRn0Wl6QAbfaxiouUeuCiFpEXsHg0CYsGvh17InKjI1JmdN0DhxGSxoTdJrXgVXikcDKutoGsGckVUBDjesUTrBgbsq3LOH2NeysVovZNboOpfXmfa5Y0OWinYo8OnxIh"
+    },
+    {
+      "file": "public/assets/queue-1.png",
+      "figmaNode": "8:206",
+      "figmaVariable": "imgAb6AXuDfmv0AKghcimL5XOc5Q5WxCrnM1ZLExk8JYmRo4XiSm0O3VrAqvRobco43C06Wzqq3IZwrjC8HN8OdPaCw4BGh4Id6Y0HdUrnIvphVx53BGwTTLxqwdfNtHguMoYohdbug5Ao3Wj15M6Uznw8YiVr3HIqU91I9QAyCbHRpDnOoCg9CJ58Lsc9Wbi3Y3PCm0I35HRjK4TjwaOcmqQoCb64I8FwJvengH383HLvu5TiOzZnc4"
+    },
+    {
+      "file": "public/assets/queue-2.png",
+      "figmaNode": "8:206",
+      "figmaVariable": "imgAb6AXuBx0U2NkEkxhfWg0OpWymmWfQ3FzeuApytkmQyvQBoL7CGHmlvJ2FehMu0FJnjLki155IMtm4C9RuN1XmRoiOjODahMvw18EmVdpIzX0LT1E6I4XGkKprjE1KjfUfmPnOy9KPxG9NpKzxyLfBqxoexdBUxV6Orh4POix4St3NlZwDaOyV5XNzE3FWMuFf8RmyVcMk4KpesI9AaCq8H4VvGoK6IqYyjw6G4VVhdxNqkwmKSlNifg"
+    },
+    {
+      "file": "public/assets/queue-3.svg",
+      "figmaNode": "8:206",
+      "figmaVariable": "imgBackground"
+    },
+    {
+      "file": "public/assets/queue-4.svg",
+      "figmaNode": "8:206",
+      "figmaVariable": "imgIcon"
+    },
+    {
+      "file": "public/assets/queue-5.svg",
+      "figmaNode": "8:206",
+      "figmaVariable": "imgContainer"
+    },
+    {
+      "file": "public/assets/queue-6.svg",
+      "figmaNode": "8:206",
+      "figmaVariable": "imgIcon1"
+    },
+    {
+      "file": "public/assets/queue-7.svg",
+      "figmaNode": "8:206",
+      "figmaVariable": "imgIcon2"
+    },
+    {
+      "file": "public/assets/queue-8.svg",
+      "figmaNode": "8:206",
+      "figmaVariable": "imgIcon3"
+    },
+    {
+      "file": "public/assets/preview-0.png",
+      "figmaNode": "8:441",
+      "figmaVariable": "imgAb6AXuAsy6YmbokaF2Cb5BlbgCo9MWkAi5Oyvpqh4S9F6Ui1EVw5V7AMX5Sot8Vx5BYxqVg1TYxIvXjCfXgq5I8FvbHfTRc3TvhoQxBgDc9MioYsajRaIxw2Ogyt7Hnv36KOj7MOrqKjnVffxoknY7G3CYjrzjPKg69Kk63HfICk89UovMd3G0VBhp93P8YQoKfSYiDybYpKsqZitxRqrpybiNo1M7Ipj71I8EIMsY3PGa81FQzN"
+    },
+    {
+      "file": "public/assets/preview-1.svg",
+      "figmaNode": "8:441",
+      "figmaVariable": "imgBackground"
+    },
+    {
+      "file": "public/assets/preview-2.svg",
+      "figmaNode": "8:441",
+      "figmaVariable": "imgContainer"
+    },
+    {
+      "file": "public/assets/preview-3.svg",
+      "figmaNode": "8:441",
+      "figmaVariable": "imgContainer1"
+    },
+    {
+      "file": "public/assets/preview-4.svg",
+      "figmaNode": "8:441",
+      "figmaVariable": "imgContainer2"
+    },
+    {
+      "file": "public/assets/preview-5.svg",
+      "figmaNode": "8:441",
+      "figmaVariable": "imgContainer3"
+    },
+    {
+      "file": "public/assets/preview-6.svg",
+      "figmaNode": "8:441",
+      "figmaVariable": "imgContainer4"
+    },
+    {
+      "file": "public/assets/filter-0.svg",
+      "figmaNode": "8:117",
+      "figmaVariable": "imgIcon"
+    },
+    {
+      "file": "public/assets/filter-1.svg",
+      "figmaNode": "8:117",
+      "figmaVariable": "imgIcon1"
+    },
+    {
+      "file": "public/assets/filter-2.svg",
+      "figmaNode": "8:117",
+      "figmaVariable": "imgContainer"
+    },
+    {
+      "file": "public/assets/filter-3.svg",
+      "figmaNode": "8:117",
+      "figmaVariable": "imgImage"
+    },
+    {
+      "file": "public/assets/filter-4.svg",
+      "figmaNode": "8:117",
+      "figmaVariable": "imgContainer1"
+    },
+    {
+      "file": "public/assets/filter-5.svg",
+      "figmaNode": "8:117",
+      "figmaVariable": "imgContainer2"
+    },
+    {
+      "file": "public/assets/filter-6.svg",
+      "figmaNode": "8:117",
+      "figmaVariable": "imgContainer3"
+    },
+    {
+      "file": "public/assets/filter-7.svg",
+      "figmaNode": "8:117",
+      "figmaVariable": "imgContainer4"
+    },
+    {
+      "file": "public/assets/filter-8.svg",
+      "figmaNode": "8:117",
+      "figmaVariable": "imgContainer5"
+    },
+    {
+      "file": "public/assets/filter-9.svg",
+      "figmaNode": "8:117",
+      "figmaVariable": "imgContainer6"
+    }
+  ],
+  "placementNotes": {
+    "header": "Assets retain exported root SVG sizes in their matching header controls.",
+    "heading": "Bulk reassignment and refresh action slots.",
+    "metric": "Average queue wait trend icon.",
+    "filter": "Search, clear, select adornments, and channel pills.",
+    "queue": "Customer images use the Figma crop: Sarah 134.03% width at -17.02% left; Marcus 134.03% height at -17.02% top; Carlos 179.02% height at -39.51% top. Other assets are verification, channel, and quick-preview icons.",
+    "preview": "Sarah preview uses the separate 56 × 56 image with a 16px corner radius. Exported verification, contact, interaction, transfer, and CRM icons retain their intrinsic sizes."
+  }
+}

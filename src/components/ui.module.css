@@ -1,0 +1,149 @@
+.asset {
+  display: block;
+  flex-shrink: 0;
+  max-width: none;
+}
+.button {
+  border: 1px solid transparent;
+  min-height: 36px;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    box-shadow 0.15s;
+  text-decoration: none;
+  white-space: normal;
+}
+.primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 2px 4px #2563eb25;
+}
+.primary:hover {
+  background: #1d4ed8;
+}
+.secondary {
+  background: #f1f5f9;
+  color: var(--ink);
+}
+.secondary:hover {
+  background: #e2e8f0;
+}
+.ghost {
+  background: transparent;
+  color: var(--muted);
+}
+.ghost:hover {
+  background: #f1f5f9;
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.blue {
+  background: #e5eeff;
+  color: #004ac6;
+}
+.green {
+  background: #ecfdf5;
+  color: #047857;
+}
+.red {
+  background: #ffe4e6;
+  color: #f43f5e;
+}
+.amber {
+  background: #fffbeb;
+  color: #b45309;
+}
+.purple {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+.neutral {
+  background: #f1f5f9;
+  color: #64748b;
+}
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px #0f172a08;
+  border: 1px solid #f1f5f9;
+  min-width: 0;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 12px;
+}
+.field input {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 100%;
+  color: var(--ink);
+  background: white;
+  font: inherit;
+}
+.dialog {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  width: min(480px, calc(100% - 32px));
+  box-shadow: 0 24px 80px #0f172a40;
+  color: var(--ink);
+}
+.dialog::backdrop {
+  background: #0f172a66;
+}
+.dialogHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.dialogHeader h2 {
+  font-size: 18px;
+  margin: 0;
+}
+.dialog p {
+  line-height: 1.7;
+  color: var(--muted);
+}
+.empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--muted);
+}
+.empty > span {
+  font-size: 32px;
+  color: #94a3b8;
+}
+.empty h3 {
+  color: var(--ink);
+  font-size: 15px;
+}
+.empty p {
+  font-size: 12px;
+}
