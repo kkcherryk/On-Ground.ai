@@ -31,6 +31,7 @@ export default function Shell() {
   const [resetOpen, setResetOpen] = useState(false);
   const [feedback, setFeedback] = useState('');
   const [search, setSearch] = useState('');
+  const [fullscreen, setFullscreen] = useState(false);
   const noticeRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const navigate = useNavigate();
@@ -39,6 +40,11 @@ export default function Shell() {
     setSearch('');
     if (window.matchMedia('(max-width: 760px)').matches) setCollapsed(true);
   }, [location.pathname]);
+  useEffect(() => {
+    const sync = () => setFullscreen(Boolean(document.fullscreenElement));
+    document.addEventListener('fullscreenchange', sync);
+    return () => document.removeEventListener('fullscreenchange', sync);
+  }, []);
   useEffect(() => {
     const media = window.matchMedia('(max-width: 760px)');
     const change = (event: MediaQueryListEvent) => setCollapsed(event.matches);
@@ -144,7 +150,8 @@ export default function Shell() {
           <Button
             variant="ghost"
             className={styles.fullscreen}
-            aria-label="Toggle fullscreen"
+            aria-label={fullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+            aria-pressed={fullscreen}
             onClick={async () => {
               try {
                 if (document.fullscreenElement) await document.exitFullscreen();
@@ -154,7 +161,19 @@ export default function Shell() {
               }
             }}
           >
-            <Asset name="header-4" />
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path
+                d={
+                  fullscreen
+                    ? 'M6 2.7V6H2.7M10 2.7V6h3.3M6 13.3V10H2.7M10 13.3V10h3.3'
+                    : 'M2.7 6V2.7H6M13.3 6V2.7H10M2.7 10v3.3H6M13.3 10v3.3H10'
+                }
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </Button>
           <div className={styles.profile}>
             <span className={styles.avatar}>
@@ -165,7 +184,7 @@ export default function Shell() {
               <div className={styles.profileLine}>
                 <strong>{agent.name}</strong>
                 <label className={styles.status} data-status={agent.availability}>
-                  <span aria-hidden="true">●</span>
+                  <span aria-hidden="true">●</span>
                   <select
                     aria-label="Agent availability"
                     value={agent.availability}
@@ -248,7 +267,9 @@ export default function Shell() {
         </div>
       </aside>
       <main id="main-content" className={styles.main} tabIndex={-1}>
-        <Outlet />
+        <div key={location.pathname} className="page-enter">
+          <Outlet />
+        </div>
         {!persistent && (
           <p className={styles.storageNotice} role="status">
             Browser storage is unavailable. Changes will last for this session.

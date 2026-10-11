@@ -290,3 +290,66 @@
     font-size: 9px;
   }
 }
+/* Motion */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.grid > .panel:hover,
+.summary > .panel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px #0f172a10;
+}
+.workItem,
+.agentCard,
+.recordLink {
+  transition:
+    background-color 0.2s var(--ease),
+    border-color 0.2s var(--ease),
+    box-shadow 0.2s var(--ease),
+    transform 0.2s var(--ease),
+    padding 0.2s var(--ease);
+}
+.workItem:hover {
+  border-color: #bfdbfe;
+  background: white;
+  box-shadow: 0 6px 16px #0f172a0d;
+  transform: translateX(3px);
+}
+.workItem.selected {
+  box-shadow: inset 3px 0 0 #2563eb;
+}
+.agentCard:hover {
+  background: white;
+  border-color: #e2e8f0;
+  box-shadow: 0 6px 16px #0f172a0d;
+}
+.recordLink:hover {
+  background: #f8fafc;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
+}
+.linkButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px #2563eb40;
+}
+.linkButton:active {
+  transform: scale(0.97);
+}
+.textLink {
+  width: fit-content;
+}
+.textLink:hover {
+  color: #1d4ed8;
+  transform: translateX(3px);
+}
+.message,
+.assist {
+  animation: rise 0.45s var(--ease) 0.1s backwards;
+}
+.summary strong {
+  animation: rise 0.6s var(--ease) 0.15s backwards;
+}

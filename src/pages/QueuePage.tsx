@@ -455,7 +455,7 @@ export default function QueuePage() {
             </footer>
           </Card>
           {selected && selectedCase && selectedCustomer && (
-            <Card className={styles.preview} data-node-id="8:441">
+            <Card key={selected.id} className={`${styles.preview} ${styles.previewSwap}`}>
               <div className={styles.previewHeading}>
                 <span>
                   <i />

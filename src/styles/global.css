@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   font-family: Inter, sans-serif;
   color: #0b1c30;
   background: #f8fafc;
@@ -19,6 +19,12 @@
 body {
   margin: 0;
   min-width: 360px;
+  caret-color: transparent;
+}
+input,
+textarea,
+[contenteditable='true'] {
+  caret-color: auto;
 }
 button,
 input,
@@ -36,9 +42,72 @@ select,
 textarea {
   -webkit-tap-highlight-color: transparent;
 }
+:root {
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ring: 0 0 0 3px #bfdbfe;
+}
+html {
+  scroll-behavior: smooth;
+}
+button,
+a,
+select,
+input {
+  transition:
+    background-color 0.2s var(--ease),
+    color 0.2s var(--ease),
+    border-color 0.2s var(--ease),
+    box-shadow 0.2s var(--ease),
+    transform 0.2s var(--ease),
+    opacity 0.2s var(--ease);
+}
+:focus {
+  outline: none;
+}
 :focus-visible {
-  outline: 3px solid #60a5fa;
-  outline-offset: 3px;
+  outline: none;
+  box-shadow: var(--ring);
+}
+/* Each route fades in; its cards rise in a short stagger. */
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+.page-enter {
+  animation: page-in 0.35s var(--ease) backwards;
+}
+.page-enter section {
+  animation: rise 0.5s var(--ease) backwards;
+}
+.page-enter section:nth-child(2) {
+  animation-delay: 50ms;
+}
+.page-enter section:nth-child(3) {
+  animation-delay: 100ms;
+}
+.page-enter section:nth-child(4) {
+  animation-delay: 150ms;
+}
+.page-enter section:nth-child(n + 5) {
+  animation-delay: 200ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 h1,
 h2,

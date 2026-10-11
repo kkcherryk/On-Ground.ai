@@ -501,3 +501,130 @@
     width: 280px;
   }
 }
+/* Motion */
+.menu {
+  border-radius: 8px;
+  transition:
+    background-color 0.2s var(--ease),
+    color 0.2s var(--ease);
+}
+.menu:hover {
+  background: #f1f5f9;
+  color: var(--ink);
+}
+.search {
+  transition:
+    border-color 0.2s var(--ease),
+    background-color 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
+}
+.search:focus-within {
+  outline: none;
+  border-color: #93c5fd;
+  background: white;
+  box-shadow: var(--ring);
+}
+.search input:focus-visible {
+  box-shadow: none;
+}
+.fullscreen {
+  width: 36px;
+  padding: 0;
+}
+.fullscreen svg {
+  transition: transform 0.25s var(--ease);
+}
+.fullscreen:hover svg {
+  transform: scale(1.15);
+}
+.fullscreen[aria-pressed='true'] {
+  color: #2563eb;
+  background: #eff6ff;
+}
+.noticeDot {
+  animation: notice-pulse 2.4s ease-out infinite;
+}
+@keyframes notice-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #f43f5e66;
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 6px #f43f5e00;
+  }
+}
+.notifications {
+  transform-origin: top right;
+  animation: pop-in 0.22s var(--ease);
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.96);
+  }
+}
+.notifications a:hover {
+  transform: translateX(2px);
+}
+.avatar i,
+.status {
+  transition:
+    background-color 0.3s var(--ease),
+    color 0.3s var(--ease);
+}
+.sidebar {
+  transition: transform 0.35s var(--ease);
+}
+.main {
+  transition: margin-left 0.35s var(--ease);
+}
+.scrim {
+  animation: fade-in 0.3s ease;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+.navLink {
+  transition:
+    background-color 0.2s var(--ease),
+    color 0.2s var(--ease),
+    box-shadow 0.2s var(--ease),
+    padding 0.2s var(--ease);
+}
+.navLink:hover:not(.active) {
+  color: var(--ink);
+  padding-left: 16px;
+}
+.navLink.active {
+  box-shadow: inset 3px 0 0 #2563eb;
+}
+.count {
+  transition:
+    background-color 0.2s var(--ease),
+    transform 0.2s var(--ease);
+}
+.navLink:hover .count {
+  transform: scale(1.08);
+}
+.assistDot {
+  transition: background-color 0.3s var(--ease);
+}
+.assistDot[data-active='true'] {
+  animation: assist-glow 2s ease-in-out infinite;
+}
+@keyframes assist-glow {
+  50% {
+    box-shadow: 0 0 0 4px #6ffbbe40;
+  }
+}
+.toast {
+  animation: toast-in 0.35s var(--ease);
+}
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+}
