@@ -6,7 +6,6 @@ A working **frontend prototype** for On-Ground.ai, built from the supplied brief
 
 **React 19 · TypeScript · Vite · Responsive UI · Local persistence**
 
-![Xeloro work queue with customer preview](docs/images/work-queue.jpg)
 
 All six implementation stages are complete. The app uses fictional records and simulated operations; no backend is required.
 
